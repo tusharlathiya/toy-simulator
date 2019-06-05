@@ -1,0 +1,83 @@
+Command Set 1: Test PLACE command is working.
+    PLACE 1,1,NORTH
+    REPORT
+
+RESULT : 1,1,NORTH
+----------------------------------
+Command Set 2: Test LEFT command is working.
+    PLACE 1,1,NORTH
+    LEFT
+    REPORT
+
+RESULT :1,1,WEST
+-----------------------------------
+Command Set 3: Test RIGHT command is working.
+    PLACE 1,1,NORTH
+    RIGHT
+    REPORT
+
+RESULT : 1,1,EAST
+--------------------------------------
+Command Set 4: Test MOVE command is working.
+    PLACE 1,1,NORTH
+    MOVE
+    REPORT
+
+RESULT : 1,2,NORTH
+---------------------------------------
+Command Set 5: Test When Directly REPORT command is called before PLACE
+    REPORT
+
+RESULT : Robot is not placed yet.
+---------------------------------------
+Command Set 6:Test What If all command called before PLACE.
+    LEFT
+    RIGHT
+    MOVE
+    REPORT
+
+RESULT : Robot is not placed yet.
+----------------------------------------
+Command Set 7: Robot should be prevented to fall.
+    PLACE 5,5,NORTH
+    MOVE
+    REPORT
+
+RESULT : 5,5,NORTH
+----------------------------------------
+Command Set 8: Robot should perform all command
+    PLACE 1,2,EAST
+    MOVE
+    MOVE
+    LEFT
+    MOVE
+    RIGHT
+    REPORT
+
+RESULT: 3,3,EAST
+-------------------------------------
+Command Set 9: Robot ignores invalid command
+    ROGER
+    FROM
+    HOUSTON
+    REPORT
+
+RESULT: Robot is not placed yet.
+----------------------------------------
+Command Set 10: Robot ignores invalid command when valid and invalid command issued
+    PLACE 1,1,NORTH
+    KILL
+    ME
+    REPORT
+
+RESULT: 1,1,NORTH
+---------------------------------------
+Command Set 11: Robot clear commands between two PLACE command.
+    PLACE 1,1,SOUTH
+    MOVE
+    RIGHT
+    PLACE 2,3,NORTH
+    MOVE
+    REPORT
+
+RESULT: 2,4,NORTH
