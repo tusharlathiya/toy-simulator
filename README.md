@@ -5,7 +5,7 @@ There are two ways to run application.
    Go to build/libs directory.
    Use command ```java -jar toy-simulator-0.0.1-SNAPSHOT.jar``` to start game.
 
-2. Go to toy-simulator/src/main/java/com/rea/simulator/toysimulator directory.
+2. Go to toy-simulator/src/main/java/com/game/simulator/toysimulator directory.
    Execute ToySimulatorApplication.java file.
    
 <h5>Notes:</h5>
